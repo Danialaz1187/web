@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+      }
+      .box {
+        border: 1px solid gray;
+        display: inline-block;
+        width: 50%;
+        margin-right: 25%;
+        margin-top: 100px;
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 20px 20px 15px rgb(189, 189, 189);
+        font-size: 20px;
+      }
+      input {
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid gray;
+        height: 40px;
+        font-size: 20px;
+        margin-bottom: 30px;
+        transition: 1s;
+      }
+      input:hover{
+        scale: 1.1;
+      }
+      input:focus{
+        scale: 1.1;
+      }
+      .welcome {
+        font-size: 25px;
+      }
+      .sub {
+        font-size: 30px;
+        background-color: rgb(255, 0, 0);
+        color: white;
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid red;
+        transition: 1s;
+      }
+      .sub:hover{
+        cursor: pointer;
+        scale: 1.1;
+        background-color: white;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="welcome">خوش آمدید</div>
+      <br />
+      <input type="text" class="fn" placeholder="نام" />
+      <input type="text" class="ln" placeholder="نام خانوادگی" />
+      <input type="text" class="age" placeholder="سن" />
+      <button class="sub">submit</button>
+      <div class="after">
+        <div class="firstn"></div>
+        <div class="yourage"></div>
+        <div class="year"></div>
+      </div>
+    </div>
+    <script>
+      let fn;
+      let ln;
+      let age;
+      document.querySelector(".sub").onclick = function () {
+        fn = document.querySelector(".fn").value;
+        ln = document.querySelector(".ln").value;
+        age = parseInt(document.querySelector(".age").value);
+        if (age < 18) {
+          document.querySelector(".year").textContent = "جوون";
+        } else if (age >= 18 && age <= 30) {
+          document.querySelector(".year").textContent = "مرد جوان";
+        } else {
+          document.querySelector(".year").textContent = "بزرگ مرد";
+        }
+        document.querySelector(".firstn").textContent = "سلام " + fn;
+        document.querySelector(".yourage").textContent = "سن:" + age;
+        document.querySelector(".fn").remove();
+        document.querySelector(".ln").remove();
+        document.querySelector(".age").remove();
+        document.querySelector(".sub").remove();
+      };
+    </script>
+  </body>
+</html>
