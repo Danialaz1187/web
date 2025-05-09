@@ -11,17 +11,21 @@
   background-color: wheat;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 25px;
   color: black;
+  height: 80px;
 }
 .header a {
   color: inherit !important;
-  padding: 4px;
+  padding: 3px;
 }
 .header a:hover{
-  border:  3px solid black;
-  border-radius: 10px;
+  border:  2px solid black;
+  border-radius: 12px;
   transition: 0.1s;
+  outline: none;
+  padding: 6px;
 }
 .header__main {
   display: flex;
@@ -30,18 +34,47 @@
 }
 .header__main-btn {
   display: inline-block;
-  margin: 10px;
   text-align: center;
 }
 .header__enter {
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  width: 110px;
 }
 .header__enter-btn {
   display: inline-block;
+  text-align: center;
 }
-.header__enter-login {
-}
-.header__enter-register {
-}
+.main__img{
+    width: 100%;
+    position: relative;
+    height: 24rem;
+  }
+  .main__computer-img{
+    width: 250px;
+    position: absolute;
+    top: 35%;
+    left: 5%;;
+  }
+  .main__btn-learn{
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    padding: 10px 40px;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(255, 136, 0);
+  }
+  .main__btn-news{
+    position: absolute;
+    top: 50%;
+    right: 14rem;
+    padding: 10px 50px;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(23, 25, 179);
+  }
